@@ -28,3 +28,20 @@
     - translate
 - project: openstack/tempest
   description: OpenStack Testing (Tempest) of an existing cloud
+- project: openstack-infra/subunit2sql
+  use-storyboard: true
+  description: Tooling for converting subunit streams into a SQL DB
+- project: openstack-infra/project-config
+  use-storyboard: true
+  groups:
+    - openstack-ci
+- project: openstack-infra/zuul
+  use-storyboard: true
+  groups:
+    - openstack-ci
+  description: The Gatekeeper, or a project gating system
+- project: openstack-infra/zuul-packaging
+  use-storyboard: true
+  groups:
+    - openstack-ci
+  description: Zuul packaging
