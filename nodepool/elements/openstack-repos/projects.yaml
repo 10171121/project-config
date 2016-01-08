@@ -26,3 +26,5 @@
   description: OpenStack Image Management (Glance)
   options:
     - translate
+- project: openstack/tempest
+  description: OpenStack Testing (Tempest) of an existing cloud
