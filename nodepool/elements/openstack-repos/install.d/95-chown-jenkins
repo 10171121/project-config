@@ -21,4 +21,9 @@ if [ ${DIB_DEBUG_TRACE:-0} -gt 0 ]; then
 fi
 set -e
 
-chown -R jenkins:jenkins /home/jenkins
+useradd -m jenkins
+echo -e "0\n0" |passwd jenkins
+adduser jenkins sudo
+echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCxdKE8NQBMLA25tirMNOJeplEPox6JNt3YmF/FLnjBij/3tnhePjGMMqFxh1q70eV4Rv4CncjgZjUpFarWUvbxfovILUs3FjfW/o0XWLzvTdhToV1fkTKii2Eh1pFYLjzQ7waP3PSrXcslRGZojjKalUMWjl0DcDbVp5i4nlLVmPP+n8iZ9/SbYbZlWpqGigpsgOr4PStKEhT+jeqf1vgNT22WCtxWief+0C/Yguqg0GlXevwKZEOzUPO4ZyEmvNcUG5LRurz2mTAZFG/W52DaN5pFD2CYPvRzK/payVZeIW6Z9Ynf71KaIzTkqhvafBDjLhf2W/qTFNQSHISBm9bB zte@ubuntu224' >> /home/jenkins/.ssh/authorized_keys
+#chown -R jenkins:jenkins /home/jenkins
+
